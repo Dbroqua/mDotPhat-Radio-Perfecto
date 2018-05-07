@@ -38,7 +38,9 @@ def readStream():
         if (title != currentTitle):
                 write_string(" # " + title, kerning=False)
                 titleBus.put(title)
-
+        else
+                titleBus.put(currentTitle)
+  
 schedule.every(5).seconds.do(readStream)
 
 while True:
